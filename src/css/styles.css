@@ -12,9 +12,33 @@ body {
   line-height: 1.5;
 }
 
+ul {
+  list-style: none;
+}
+
+span {
+  font-weight: 700;
+}
+
+img {
+  display: block;
+}
+
 #search-box {
   font: inherit;
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+}
+
+.li-item {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.title-box {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }

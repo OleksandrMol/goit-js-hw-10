@@ -42,8 +42,8 @@ function createMarkupList(data) {
     clearAll();
      refs.countryList.innerHTML = data.map(({ name, flags }) => {
             return `<li class="li-item">
-        <img src="${flags.svg}" alt="${flags.alt}" width="40" height="30">
-        <h2>${name.common}</h2>
+        <img src="${flags.svg}" alt="${flags.alt}" width="50" height="40">
+        <h3>${name.common}</h3>
       </li>`;
      }).join('');
     
@@ -51,19 +51,17 @@ function createMarkupList(data) {
 
 function createMarkupCard(data) {
     clearAll();
-    refs.countryList.innerHTML = data.map(({ name, capital, population, flags, languages }) => {
-        return `<img src="${flags.svg}" width="70" height="60" alt="${flags.alt}">
-        <h2>${name.common} (${name.common})</h2>
-        <p>Capital: ${capital}</p>
-        <p>Population: ${population.toLocaleString()}</p>
-        <p>Languages: ${Object.values(languages).join(', ')}</p>`
+    refs.countryInfo.innerHTML = data.map(({ name, capital, population, flags, languages }) => {
+        return `<div class = "title-box">
+        <img src="${flags.svg}" width="60" height="50" alt="${flags.alt}">
+        <h1>${name.common}</h1>
+        </div>
+        <p><span>Capital:</span> ${capital}</p>
+        <p><span>Population:</span> ${population.toLocaleString()}</p>
+        <p><span>Languages:</span> ${Object.values(languages).join(', ')}</p>`
         
     })
 }
-
-
-
-
 
 function onError() {
     clearAll();
